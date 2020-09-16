@@ -1,0 +1,84 @@
+<html>
+
+    <head>
+
+        <meta charset="utf-8"/>
+
+        <title>任务四：定位和居中问题</title>
+
+        <style>
+
+            /* 
+             (1）先定位，设置 top:0;bottom:0;margin:auto 可以使元素垂直居中于父元素。
+            （2）设置 left：0;right：0;margin:auto 可以使元素水平居中。
+            （3）设置四个值都是0，margin:auto ；这个元素就在正中间了。
+            如果不设置元素大小，就平铺了
+            */
+            /*如果灰色高度是根据内容动态变化的：
+              高度自适应，改变top和bottom的值，实现垂直居中
+            */
+
+            #main
+            {
+                position: absolute;
+                margin: auto;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                width: 400px;
+                height: 200px;
+                background-color: #ccc
+            }
+
+            /* 
+            实现四分之一圆：
+            {
+                width:50px;
+                height:50px;
+                border-radius:50px 0 0 0;
+            }
+            实现一个圆：
+            {
+                width:100px;
+                height:100px;
+                border-radius:50px;
+            }
+            */
+
+            #top-left
+            {
+                width: 50px;
+                height: 50px;
+                border-radius: 0 0 50px 0;
+                background-color: yellow
+            }
+
+            #bottom-right
+            {
+                position: absolute;
+                right: 0;
+                top: 150px;
+                width: 50px;
+                height: 50px;
+                border-radius: 50px 0 0 0;
+                background-color: yellow
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <div id="main">
+
+                <div id="top-left"></div>
+
+                <div id="bottom-right"></div>
+
+        </div>
+
+    </body>
+
+</html>
