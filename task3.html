@@ -1,0 +1,173 @@
+<html>
+
+    <head>
+
+        <meta charset="utf-8"/>
+
+        <title>任务三：三样式布局</title>
+
+        <style>
+
+            /*
+            使用position
+            #wrappe
+            {
+                position:relative;
+            }
+            #main-left
+            {
+                position:absolute;
+                top: ;
+                left: ;
+            }
+            #main-right
+            {
+                position:relative;
+                top: ;
+                right: ;
+            }
+            */
+
+            /*
+            <div></div>标签对的顺序对应着浏览器中每一块的顺序，
+            <div id="main-right"></div>要在<div id="main"></div>前面
+            否则布局将会错乱
+            */
+            #wrapper
+            {
+
+                margin: 20px;
+
+                background-color: #eee;
+
+                /*清除浮动所带来的影响*/
+                overflow: auto;
+
+                /*解决了极端情况下的效果*/
+                min-width: 600px;
+
+            }
+            #main-left
+            {
+                
+                float: left;
+
+                width: 180px;
+
+                background-color: white;
+
+            }
+            #main-right
+            {
+
+                float: right;
+
+                width: 140px;
+
+                border: 1px solid #999;
+
+                text-align: center;
+
+                background-color: white;
+            }
+            #main
+            {
+                
+                /*中间一栏根据父元素宽度填充满*/
+                margin: 0 160px 0 240px;
+
+                background-color: white;
+                
+            }
+            #wrapper,#main-left,#main
+            {
+                
+                padding: 20px;
+
+                border: 1px solid #999;
+
+            }
+            .member-logo
+            {
+                
+                width: 80px;
+
+                height: 80px;
+
+                margin: 10px 0;
+
+            }
+            #team-logo
+            {
+                
+                float: left;
+
+                width: 80px;
+
+                height: 80px;
+
+            }
+            #team-name
+            {
+                
+                float: right;
+
+                /*使文字和图片垂直方向上平齐*/
+                margin-top: 0;
+
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <div id="wrapper">
+
+            <div id="main-left">
+
+                <img id="team-logo" src="picture/task1.jpg"/>
+
+                <h4 id="team-name">团队名称</h4>
+
+            </div>
+
+            <div id="main-right">
+
+                <img class="member-logo" src="picture/task1.jpg"/>
+
+                <img  class="member-logo" src="picture/task1.jpg"/>
+
+                <img class="member-logo" src="picture/task1.jpg"/>
+           
+            </div>
+
+            <div id="main">
+
+                <h2>团队介绍</h2>
+
+                <p>
+
+                    君不见，黄河之水天上来，奔流到海不复回。 
+                    君不见，高堂明镜悲白发，朝如青丝暮成雪。 
+                    人生得意须尽欢，莫使金樽空对月。 
+                    天生我材必有用，千金散尽还复来。 
+                    烹羊宰牛且为乐，会须一饮三百杯。 
+                    岑夫子，丹丘生，将进酒，杯莫停。 
+                    与君歌一曲，请君为我倾耳听。 
+                    钟鼓馔玉不足贵，但愿长醉不复醒。 
+                    古来圣贤皆寂寞，惟有饮者留其名。 
+                    陈王昔时宴平乐，斗酒十千恣欢谑。 
+                    主人何为言少钱，径须沽取对君酌。 
+                    五花马，千金裘，呼儿将出换美酒，与尔同销万古愁。 
+                    
+                </p>
+
+            </div>
+ 
+        </div>
+     
+    </body>
+
+</html>
